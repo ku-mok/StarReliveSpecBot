@@ -15,7 +15,7 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def star_char_info(ctx, arg):
+async def starrelive(ctx, arg):
     await ctx.send(arg)
 
 
