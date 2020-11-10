@@ -2,4 +2,7 @@ discord.py[voice]>=1.4.1
 pandas
 requests
 beautifulsoup4
+lxml
+html5lib
+bs4
 
