@@ -24,12 +24,12 @@ async def starrelive(ctx, command, arg):
     elif command == "all":
         await ctx.send(arg + "の性能は")
         result = get_char_info(arg)
-        await ctx.send(df_all_row_to_str(result))
+        await ctx.send(df_all_row_to_str(result[0]))
+        await ctx.send(result[1])
     elif (command_list[command] >= 1 or command_list[command] <= 3):
-        result = get.get_char_info(arg, command)
-        await ctx.send(df_two_row_to_str(result))
-
-    await ctx.send(arg)
+        result = get_char_info(arg, command)
+        await ctx.send(df_two_row_to_str(result[0]))
+        await ctx.send(result[1])
 
 
 bot.run(token)

@@ -25,7 +25,9 @@ def get_char_info(name: str, target="all"):
         "status": ["最大ステ", "アクセ付ステ"]
     }
     target = target_columns[target]
-    return char_info.query("category in @target")
+    detail_url_base = "https://revuestarlight.boom-app.wiki"
+    return (char_info.query("category in @target"),
+            detail_url_base + name_url[name.replace(" ", "")])
 
 
 def parse_char_info(char_url: str):
